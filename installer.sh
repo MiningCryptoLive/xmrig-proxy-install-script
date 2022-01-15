@@ -27,7 +27,9 @@ git clone https://github.com/xmrig/xmrig-proxy.git
 
 reset
 
-echo STARTING BUILD
+echo
+echo
+echo "STARTING BUILD"
 echo
 echo
 
@@ -45,7 +47,7 @@ sudo chmod +x xmrig-proxy
 
 reset
 
-echo MAKE FINISHED!
+echo "BUILD FINISHED!"
 echo
 echo
 
@@ -97,9 +99,9 @@ cat > config.json << EOF
 
 "url": "mine.monerod.org:4444",
 
-"user": "'"$YOUR_WALLET_ADDRESS"'",
+"user": ""$YOUR_WALLET_ADDRESS"",
 
-"pass": "'"$YOUR_RIG_NAME"'",
+"pass": ""$YOUR_RIG_NAME"",
 
 "rig-id": null,
 
@@ -145,4 +147,6 @@ sudo rm mycron
 echo
 echo
 echo "Rebooting...!"
+echo
+echo
 sudo reboot
