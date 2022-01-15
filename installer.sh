@@ -99,9 +99,9 @@ cat > config.json << EOF
 
 "url": "mine.monerod.org:4444",
 
-"user": ""$YOUR_WALLET_ADDRESS"",
+"user": "$YOUR_WALLET_ADDRESS",
 
-"pass": ""$YOUR_RIG_NAME"",
+"pass": "$YOUR_RIG_NAME",
 
 "rig-id": null,
 
