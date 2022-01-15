@@ -51,14 +51,12 @@ echo
 
 
 # Gather variables for config file
-echo "Enter Wallet Address:"
-read YOUR_WALLET_ADDRESS
+read -p "Enter Wallet Address: " YOUR_WALLET_ADDRESS
 
 echo
 echo
 
-echo "Enter device display name/Pool Password:"
-read YOUR_RIG_NAME
+read -p "Enter device display name/Pool Password: " YOUR_RIG_NAME
 
 
 
@@ -97,9 +95,9 @@ cat > config.json << EOF
 
 "url": "mine.monerod.org:4444",
 
-"user": \"$YOUR_WALLET_ADDRESS\",
+"user": "\""$YOUR_WALLET_ADDRESS"\"",
 
-"pass": \"$YOUR_RIG_NAME\",
+"pass": "\""$YOUR_RIG_NAME"\"",
 
 "rig-id": null,
 
