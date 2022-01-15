@@ -60,6 +60,9 @@ echo
 echo "Enter device display name/Pool Password:"
 read YOUR_RIG_NAME
 
+
+
+
 cat > config.json << EOF
 {
 "bind": [
@@ -94,9 +97,9 @@ cat > config.json << EOF
 
 "url": "mine.monerod.org:4444",
 
-"user": "\""$YOUR_WALLET_ADDRESS"\"",
+"user": "'"$YOUR_WALLET_ADDRESS"'",
 
-"pass": "\""$YOUR_RIG_NAME"\"",
+"pass": "'"$YOUR_RIG_NAME"'",
 
 "rig-id": null,
 
@@ -121,10 +124,13 @@ cat > config.json << EOF
 }]}
 EOF
 
+echo
+echo
 # UFW
 echo "Adding firewall rules"
-sudo ufw allow 3333
-sudo ufw allow 22
+echo
+sudo ufw allow 3333 &> /dev/null
+sudo ufw allow 22 &> /dev/null
 sudo ufw enable
 
 
@@ -139,5 +145,4 @@ sudo rm mycron
 echo
 echo
 echo "Rebooting...!"
-sleep 4
 sudo reboot
