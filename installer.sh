@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd ~
 echo "CHECKING FOR PREVIOUS INSTALL..."
 echo
 FILE=xmrig-proxy/build/xmrig-proxy
@@ -22,7 +23,6 @@ echo CLONING FROM GIT
 echo
 
 # Clone and build xmrig-proxy lastest src code
-cd ~
 git clone https://github.com/xmrig/xmrig-proxy.git
 
 reset
