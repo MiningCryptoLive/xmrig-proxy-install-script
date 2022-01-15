@@ -51,15 +51,14 @@ echo
 
 
 # Gather variables for config file
-read -p "Enter Wallet Address: " YOUR_WALLET_ADDRESS
+echo "Enter Wallet Address:"
+read YOUR_WALLET_ADDRESS
 
 echo
 echo
 
-read -p "Enter device display name/Pool Password: " YOUR_RIG_NAME
-
-
-
+echo "Enter device display name/Pool Password:"
+read YOUR_RIG_NAME
 
 cat > config.json << EOF
 {
