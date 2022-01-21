@@ -15,7 +15,7 @@ echo "Checking for system updates"; sudo apt update &> /dev/null
 echo
 echo "Installing updates"; sudo apt upgrade -y &> /dev/null
 echo
-echo "Installing required packages"; sudo apt install -y git screen ufw build-essential cmake libuv1-dev uuid-dev libmicrohttpd-dev libssl-dev &> /dev/null
+echo "Installing required packages"; sudo apt install -y git screen build-essential cmake libuv1-dev uuid-dev libmicrohttpd-dev libssl-dev &> /dev/null
 echo
 
 echo CLONING FROM GIT
@@ -149,7 +149,14 @@ echo
 (crontab -l ; echo "@reboot sudo screen -dmS xmrig-proxy-screen /root/xmrig-proxy/build/xmrig-proxy")|crontab 2> /dev/null
 echo
 echo
-echo "Rebooting...!"
+echo "Finished!"
 echo
 echo
-sudo reboot
+read -p "Reboot now? " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    reboot
+else
+    exit 0
+fi
