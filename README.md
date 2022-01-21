@@ -1,5 +1,5 @@
 # xmrig-proxy-install-script
-For Ubuntu 20.04 Focal
+For Ubuntu 20.04 Focal - 
 Builds xmrig-proxy from src and configures crontab reboot job, UFW.
 
 Clone script and run locally:
