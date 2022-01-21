@@ -15,7 +15,7 @@ echo "Checking for system updates"; sudo apt update &> /dev/null
 echo
 echo "Installing updates"; sudo apt upgrade -y &> /dev/null
 echo
-echo "Installing required packages"; sudo apt install -y git screen build-essential cmake libuv1-dev uuid-dev libmicrohttpd-dev libssl-dev &> /dev/null
+echo "Installing required packages"; sudo apt install -y git screen ufw build-essential cmake libuv1-dev uuid-dev libmicrohttpd-dev libssl-dev &> /dev/null
 echo
 
 echo CLONING FROM GIT
