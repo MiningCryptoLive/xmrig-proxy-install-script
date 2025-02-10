@@ -105,7 +105,7 @@ cat > config.json << EOF
 
 "rig-id": null,
 
-"nicehash": false,
+"nicehash": true,
 
 "keepalive": true,
 
